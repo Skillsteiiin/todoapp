@@ -1,0 +1,134 @@
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center;
+  gap: 14px;
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+header,
+.main {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+header button:hover {
+  opacity: 0.7;
+}
+
+header button,
+header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  background: white;
+  color: black;
+  box-shadow: 9px 10px 8px -3px rgba(34, 60, 80, 0.27);
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 9px 10px 8px -3px rgba(34, 60, 80, 0.27);
+}
+
+.todoItem p {
+  flex: 1;
+  color: black;
+}
+
+.actions__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 15px;
+}
+
+.actions__container button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actions__container button:hover {
+  opacity: 0.7;
+}
+
+.crossed-todo {
+  text-decoration: line-through;
+}
+
+.checked-todo:checked + label::before {
+  color: rgb(0, 255, 72); /* Цвет галочки */
+}
+
+.checked-todo:hover + label::before {
+  opacity: 0.7;
+}
+
+@media (min-width: 640px) {
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
